@@ -1,0 +1,171 @@
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+h2,
+.bg-dark {
+  color: #fff;
+  margin: 2rem auto;
+}
+.bg-light {
+  color: hsl(0, 0%, 17%);
+}
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-image: url(images/pattern-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 35vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+#mapid {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  margin: 0 auto;
+  z-index: 2;
+}
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-container {
+  display: flex;
+  width: 35vw;
+  height: 3rem;
+}
+.input-field {
+  width: 32vw;
+  height: 3rem;
+  font-size: 1em;
+  padding-left: 1.2em;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  border-style: none;
+}
+button {
+  background-color: black;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  width: 3vw;
+  height: 3rem;
+  border-style: none;
+  cursor: pointer;
+}
+
+.card {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 70vw;
+  height: 10rem;
+  margin-top: 11rem;
+  z-index: 10;
+}
+.results {
+  display: flex;
+  padding-left: 2em;
+  width: 65vw;
+  height: 8rem;
+  list-style: none;
+}
+.section {
+  flex-basis: 100%;
+  align-self: flex-start;
+  margin-top: 2rem;
+  padding: 0 0 3em 1em;
+}
+p {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 59%);
+  font-size: 80%;
+  font-weight: 700;
+}
+h4 {
+  color: hsl(0, 0%, 17%);
+  margin-top: 1rem;
+  font-size: 110%;
+  font-weight: 500;
+}
+
+.results > * + * {
+  border-left: 1px solid hsl(0, 1%, 73%);
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (max-width: 65rem) {
+  h4 {
+    font-size: 70%;
+  }
+  p {
+    font-size: 50%;
+  }
+  .input-field {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 40rem) {
+  .search-container {
+    width: 90vw;
+  }
+  .input-field {
+    width: 80vw;
+  }
+  button {
+    width: 10vw;
+  }
+  .card {
+    width: 90vw;
+    height: 25rem;
+  }
+  .results {
+    height: inherit;
+    width: 90vw;
+    padding: 0;
+    flex-direction: column;
+  }
+  .section {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+    padding: 0;
+    border: none;
+    align-self: center;
+  }
+
+  p {
+    grid-row: 1;
+    font-size: 70%;
+    justify-self: center;
+  }
+  h4 {
+    grid-row: 2;
+    font-size: 100%;
+    justify-self: center;
+  }
+}

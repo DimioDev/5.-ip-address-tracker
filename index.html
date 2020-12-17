@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+
+      <div class="search">
+        <h2 class="bg-dark">IP Address Tracker</h2>
+        <div class="search-container">
+          <input id="input" class="input-field" type="text" placeholder="Search for any IP address or domain"
+            name="search">
+          <button id="btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+              <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+            </svg></button>
+        </div>
+      </div>
+
+      <div class="card bg-light">
+        <div class="results">
+          <div class="section">
+            <p class="my-ip">IP Address</p>
+            <h4 id="resolve-ip">...</h4>
+          </div>
+          <div class="section">
+            <p class="my-location">Location</p>
+            <h4 id="resolve-location">...</h4>
+          </div>
+          <div class="section">
+            <p class="my-time">Timezone</p>
+            <h4 id="resolve-timezone">...</h4>
+          </div>
+          <div class="section">
+            <p class="my-isp">Isp</p>
+            <h4 id="resolve-isp">...</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mapid"></div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Dimitar Odrinski</a>.
+    </div>
+  </div>
+</body>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+<script src="style.js"></script>
+</script>
+
+</html>
